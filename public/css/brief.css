@@ -1,0 +1,59 @@
+.brief-form {
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
+}
+
+.brief-item {
+    width: 20rem;
+    max-width: 95%;
+}
+
+.brief__title {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.brief__description {
+   
+    text-align: ;
+    position: relative;
+}
+
+.brief_heading {
+  
+    text-align: justify;
+    position: relative;
+}
+
+
+.float-container {
+    border: 3px solid #fff;
+    padding: 20px;
+    display: flex;
+}
+
+.float-child {
+    width: 100%;
+    float: left;
+    padding: 0.5rem;
+    border: 2px;
+
+}  
+
+.card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  }
+  
+  .card__header,
+  .card__content {
+    padding: 1rem;
+  }
+  
+  .card__header h1,
+  .card__content h1,
+  .card__content h2,
+  .card__content p {
+    margin: 0;
+  }
+  

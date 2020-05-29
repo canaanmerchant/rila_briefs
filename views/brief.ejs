@@ -1,0 +1,76 @@
+<%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/brief.css">
+</head>
+
+<body>
+    <%- include('includes/navigation.ejs') %>
+
+    <main>
+        <% if (Brief.length > 0) { %>
+            <div class="grid">
+                <% for (let briefs of Brief) { %>
+                    <article class="card brief-item">
+                        <header class="card__header">
+                            <h1 class="brief__title"><%= briefs.brief_title %></h1>
+                        </header>
+                    
+                            <div class="card__content float-container">                            
+                                <p class="brief_heading float-child"><b> Country:</b></p>
+                                <p class="brief__description float-child"><%= briefs.country %></p>
+                            </div>
+                            <div class="card__content float-container">                            
+                                <p class="brief_heading float-child"><b> PSG:</b></p>
+                                <p class="brief__description float-child"><%= briefs.psg %></p>
+                            </div>
+                        
+                            <div class="card__content float-container">
+                                <p class="brief_heading float-child"><b> One Year Withholding: </b></p>
+                                <p class="brief__description float-child"><%= briefs.one_year_withholding %></p>
+                            </div>
+
+                            <div class="card__content float-container">
+                                <p class="brief_heading float-child"><b> Withholding Only: </b></p>
+                                <p class="brief__description float-child"><%= briefs.withholding_only %></p>
+                            </div>
+
+                            <div class="card__content float-container"> 
+                                <p class="brief_heading float-child"><b> Practice Advisory: </b></p>
+                                <p class="brief__description float-child"><%= briefs.practice_advisory %></p>
+                            </div>
+
+                            <div class="card__content float-container"> 
+                                <p class="brief_heading float-child"><b> Courthouse: </b></p>
+                                <p class="brief__description float-child"><%= briefs.courthouse %></p>
+                            </div>
+                        
+                            <div class="card__content float-container"> 
+                                <p class="brief_heading float-child"><b> Pages: </b></p>
+                                <p class="brief__description float-child"><%= briefs.pages %></p>
+                            </div>
+
+                            <div class="card__content float-container"> 
+                                <p class="brief_heading float-child"><b> Addition PSGs: </b></p>
+                                <p class="brief__description float-child"><%= briefs.additional_psg %></p>
+                            </div>
+                            
+                            <div class="card__content float-container"> 
+                                <p class="brief_heading float-child"><b> Gangs: </b></p>
+                                <p class="brief__description float-child"><%= briefs.gangs %></p>
+                            </div>
+                            <div class="card__content float-container"> 
+                                <p class="brief_heading float-child"><b> Gang Name: </b></p>
+                                <p class="brief__description float-child"><%= briefs.gang_name %></p>
+                            </div>
+                        
+                        
+                        <div class="card__actions">
+                            <button class="btn"><a href="<%= briefs.link %>">Link to Brief</a></button>
+                        </div>
+                    </article>
+                <% } %>
+            </div>
+        <% } else { %>
+            <h1>No briefs Found!</h1>
+        <% } %>
+    </main>
+<%- include('includes/end.ejs') %>
