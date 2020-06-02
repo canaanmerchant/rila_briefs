@@ -7,7 +7,7 @@ const mongoConnect = require('./util/database').mongoConnect;
 const errorController = require('./controllers/error');
 
 const app = express();
-const port = 3002;
+const port = process.env.PORT || 3002;
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
