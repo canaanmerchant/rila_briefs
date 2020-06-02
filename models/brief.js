@@ -1,9 +1,11 @@
 const getDb = require('../util/database').getDb;
 
 class Brief {
-  constructor(  country, 
+  constructor(  brief_title,
+                country, 
                 psg, 
-                one_year_witholding, 
+                one_year_withholding, 
+                withholding_only,
                 practice_advisory,
                 courthouse,
                 pages,
@@ -11,9 +13,11 @@ class Brief {
                 gangs,
                 gang_name,
                 link) {
+    this.brief_title = brief_title;
     this.country = country;
     this.psg = psg;
-    this.one_year_witholding = one_year_witholding;
+    this.one_year_withholding = one_year_withholding;
+    this.withholding_only = withholding_only;
     this.practice_advisory = practice_advisory;
     this.courthouse = courthouse;
     this.pages = pages;

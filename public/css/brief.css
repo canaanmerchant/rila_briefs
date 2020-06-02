@@ -16,7 +16,7 @@
 
 .brief__description {
    
-    text-align: ;
+    text-align: right;
     position: relative;
 }
 
@@ -24,6 +24,7 @@
   
     text-align: justify;
     position: relative;
+    word-spacing: normal;
 }
 
 
@@ -31,6 +32,7 @@
     border: 3px solid #fff;
     padding: 20px;
     display: flex;
+    justify-content: flex-start;
 }
 
 .float-child {
@@ -38,6 +40,8 @@
     float: left;
     padding: 0.5rem;
     border: 2px;
+    word-spacing: normal;
+    min-inline-size: fit-content;
 
 }  
 
@@ -48,6 +52,12 @@
   .card__header,
   .card__content {
     padding: 1rem;
+    background: #eeeeec;
+    border: 0px;
+    color: #080911;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: right;
   }
   
   .card__header h1,
