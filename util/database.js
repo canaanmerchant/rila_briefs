@@ -7,7 +7,8 @@ const mongoConnect = callback => {
   MongoClient.connect(
    // 'mongodb://localhost:27017/briefs'
     'mongodb+srv://<user:pw>@rila-briefs-vj48b.mongodb.net/briefs?retryWrites=true&w=majority'
-  )
+
+    )
   .then(client => {
     console.log('Connected!');
     _db = client.db();
