@@ -20,7 +20,7 @@ const store = new MongoDBStore({
   });
 
 
-const port = server.listen(process.env.PORT || 3002);
+const port = app.listen(process.env.PORT || 3002);
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
