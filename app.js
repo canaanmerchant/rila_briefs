@@ -20,7 +20,7 @@ const store = new MongoDBStore({
   });
 
 
-const port = 3002;
+const port = server.listen(process.env.PORT || 3002);
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
@@ -64,7 +64,7 @@ app.use(errorController.get404);
 mongoose
   .connect(MONGODB_URI)
   .then(result => {
-    app.listen(port|| 3000);
+    app.listen(port);
   })
   .catch(err => {
     console.log(err);
