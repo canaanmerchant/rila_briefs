@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const MongoDBStore = require('connect-mongodb-session')(session);
 
-const MONGODB_URI = 'mongodb://localhost:27017/briefs';
+const MONGODB_URI = 'mongodb+srv://dbadmin:xDpxa5g04Y2pMX4q@rila-briefs-vj48b.mongodb.net/briefs?retryWrites=true&w=majority';
 const User = require('./models/user');
 
 
