@@ -7,7 +7,8 @@ exports.getBriefs = (req, res, next) => {
       res.render('brief', {
         Brief: briefs,
         pageTitle: 'All Briefs',
-        path: '/'
+        path: '/',
+        isAuthenticated: req.session.isLoggedIn
       });
     })
     .catch(err => {
@@ -21,7 +22,8 @@ exports.getAddBrief = (req, res, next) => {
       path: '/admin/add-brief',
       formsCSS: true,
       briefCSS: true,
-      activeAddBrief: true
+      activeAddBrief: true,
+      isAuthenticated: req.session.isLoggedIn
     });
   };
   
