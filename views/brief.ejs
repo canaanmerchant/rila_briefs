@@ -12,8 +12,11 @@
                     <article class="card brief-item">
                         <header class="card__header">
                             <h1 class="brief__title"><%= briefs.brief_title %></h1>
-                        </header>
-                    
+                        </header>  
+                        
+
+            
+                        
                             <div class="card__content float-container">                            
                                 <p class="brief_heading float-child"><b> Country:</b></p>
                                 <p class="brief__description float-child"><%= briefs.country %></p>
@@ -66,6 +69,12 @@
                         <div class="card__actions">
                             <button class="btn"><a href="<%= briefs.link %>">Link to Brief</a></button>
                         </div>
+
+                        <div class="card__actions">
+                            <a href="/admin/edit-brief/<%= briefs._id %>?edit=true" class="btn">Edit</a>
+                                <input type="hidden" value="<%= briefs._id %>" name="briefId">
+                                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                            </form>
                     </article>
                 <% } %>
             </div>

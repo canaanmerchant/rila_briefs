@@ -1,0 +1,47 @@
+<%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/brief.css">
+</head>
+
+<body>
+   <%- include('includes/navigation.ejs') %>
+
+    <main>
+        <form class="brief-form" action="/admin/<% if (editing) { %>edit-brief <% } else {%> add-brief <% } %>" method="POST">
+            <div class="form-control">
+                <label for="title">Title</label>
+                <input type="text" name="brief_title" id="brief_title" value="<% if (editing) { %><%= brief.brief_title %><% } %>">
+                <label for="title">Country</label>
+                <input type="text" name="country" id="country" value="<% if (editing) {%><%= brief.country %> <% } %>">
+                <label for="title">PSG </label>
+                <input type="text" name="psg" id="psg" value="<% if (editing) {%><%= brief.psg %> <% } %>">
+                <label for="title">One Year Witholding </label>
+                <input type="text" name="one_year_withholding" id="one_year_withholding" value="<% if (editing) {%><%= brief.one_year_withholding %> <% } %>">
+                <label for="title">Withholding Only </label>
+                <input type="text" name="withholding_only" id="withholding_only" value="<% if (editing) {%><%= brief.withholding_only %> <% } %>">
+                <label for="title">Practice Advisory </label>
+                <input type="text" name="practice_advisory" id="practice_advisory" value="<% if (editing) {%><%= brief.practice_advisory %> <% } %>">
+                <label for="title">Courthouse </label>
+                <input type="text" name="courthouse" id="courthouse" value="<% if (editing) {%><%= brief.courthouse %> <% } %>">
+                <label for="title">Pages </label>
+                <input type="text" name="pages" id="pages" value="<% if (editing) {%><%= brief.pages %> <% } %>">
+                <label for="title">Additional PSG </label>
+                <input type="text" name="additional_psg" id="additional_psg" value="<% if (editing) {%><%= brief.additional_psg %> <% } %>">
+                <label for="title">Gangs </label>
+                <input type="text" name="gangs" id="gangs" value="<% if (editing) {%><%= brief.gangs %> <% } %>">
+                <label for="title">Gang Name </label>
+                <input type="text" name="gang_name" id="gang_name" value="<% if (editing) {%><%= brief.gang_name %> <% } %>">
+                <label for="title">Link </label>
+                <input type="text" name="link" id="link" value="<% if (editing) {%><%= brief.link %> <% } %>">
+            </div>
+            
+
+            <% if (editing) { %>
+                <input type="hidden" value="<%= brief._id %>" name="briefId">
+            <% } %>
+    
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <button class="btn" type="submit"><% if (editing) { %>Update Brief<% } else { %>Add Brief<% } %></button>
+        </form>
+    </main>
+<%- include('includes/end.ejs') %>

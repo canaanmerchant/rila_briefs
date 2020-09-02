@@ -22,11 +22,12 @@ const store = new MongoDBStore({
     collection: 'sessions'
   });
 
-
+mongoose.set('useFindAndModify', false);
 const csrfProtection = csrf();
 app.use(flash());
 
 const port = app.listen(process.env.PORT || 3002);
+
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
@@ -69,11 +70,11 @@ app.use((req, res, next) => {
 });
 
 
-
-
-app.use('/admin', adminRoutes);
 app.use(briefRoutes);
+app.use('/admin', adminRoutes);
+
 app.use(authRoutes);
+
 
 app.use(errorController.get404);
 

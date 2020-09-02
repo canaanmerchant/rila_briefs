@@ -10,4 +10,6 @@ const router = express.Router();
 
 router.get('/', isAuth, briefsController.getBriefs);
 
+
+
 module.exports = router;

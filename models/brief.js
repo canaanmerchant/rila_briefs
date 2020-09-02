@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 
  const briefSchema = new Schema({
             brief_title: String,
+            new_field: String,
+            new_field: String,
             country: String, 
             psg: String,
             one_year_withholding: String,
@@ -16,7 +18,7 @@ const mongoose = require('mongoose');
             link: String
           });
 
- module.exports = mongoose.model('Brief', briefSchema); 
+ module.exports = mongoose.model('dev-briefs', briefSchema); 
 
 
 // const getDb = require('../util/database').getDb;
