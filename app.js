@@ -11,7 +11,7 @@ const csrf = require('csurf');
 const flash = require('connect-flash');
 
 
-const MONGODB_URI = 'mongodb+srv://dbadmin:xDpxa5g04Y2pMX4q@rila-briefs-vj48b.mongodb.net/briefs?retryWrites=true&w=majority';
+const MONGODB_URI = 'mongodb+srv://[USERNAME]:[PASSWORD]@rila-briefs-vj48b.mongodb.net/briefs?retryWrites=true&w=majority';
 const User = require('./models/user');
 
 
